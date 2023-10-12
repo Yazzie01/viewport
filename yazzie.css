@@ -76,6 +76,12 @@ table {
 /* ----- CHECK FOR USER DARK MODE PREFERENCE ----- */
 /* --------------- BEGIN USER PREFERS DARK COLOR SCHEME QUERY --------------- */
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-gray);
+    }
+}
+
 /* CHANGE THE BODY'S BACKGROUND COLOR TO THE DARK GRAY IF THE USER PREFERS DARK MODE */
 
 /* --------------- END USER PREFERS DARK COLOR SCHEME QUERY --------------- */
@@ -116,6 +122,7 @@ img{
     overflow: visible;
 }
 
+
 footer .icon{
     font-size: 1em;
 }
@@ -129,7 +136,13 @@ footer .icon{
     0% { font-variation-settings: "TIME" 1; }
   100% { font-variation-settings: "TIME" 100; }
 }
-
+.icon {
+    font-variation-settings: "TIME" 1;
+    transition: font-variation-settings 0.4s ease;
+ }
+ .icon:hover {
+    font-variation-settings: "TIME" 100;
+ }
 
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
